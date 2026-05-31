@@ -16,7 +16,7 @@
   font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #6c978d;
+  color: #63314B;
   margin-bottom: 8px;
   font-weight: bold;
 }
@@ -259,7 +259,7 @@
 .port-work-count {
   font-size: 12px;
   font-weight: bold;
-  color: #6c978d;
+  color: #63314B;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   white-space: nowrap;
@@ -307,11 +307,11 @@
 }
 
 .port-piece:hover .port-piece-name {
-  color: #C45E51;
+  color: #853D52;
 }
 
 .port-piece:hover .port-piece-desc {
-  color: #C45E51;
+  color: #853D52;
 }
 
 .port-piece-num {
@@ -327,7 +327,7 @@
   font-size: 12px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #63314B;
+  color: #C45E51;
   margin-bottom: 8px;
   font-weight: 500;
 }
@@ -339,7 +339,7 @@
   margin: 0 0 6px;
   line-height: 1.2;
   letter-spacing: -0.01em;
-  color: var(--md-ink);
+  color: #000000;
   transition: color 0.2s;
 }
 
@@ -351,7 +351,7 @@
 .port-piece-sub {
   font-size: 14px;
   font-weight: 500;
-  color: #63314B;
+  color: #C45E51;
   font-style: italic;
   margin-bottom: 12px;
   font-family: 'Playfair Display', serif;
@@ -418,7 +418,8 @@
 
 .port-statement-aside {
   font-size: 14px;
-  color: #63314B;
+  font-weight: bold;
+  color: #6c978d;
   line-height: 1.7;
   font-style: italic;
   font-family: 'Playfair Display', serif;
@@ -456,7 +457,7 @@
 .port-statement-body {
   font-size: 16px;
   line-height: 1.8;
-  color: #63314B;
+  color: #000000;
   margin: 0;
   text-wrap: pretty;
 }
