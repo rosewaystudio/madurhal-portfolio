@@ -55,6 +55,7 @@
 
 .port-nav-links a {
   font-size: 11px;
+  font-weight: bold;
   color: var(--md-ink-2);
   text-decoration: none;
   letter-spacing: 0.16em;
@@ -189,7 +190,7 @@
 }
 
 .port-hero-meta-note em {
-  color: #63314B;
+  color: #6c978d;
   font-style: italic;
   font-weight: bold;
 }
@@ -419,7 +420,7 @@
 .port-statement-aside {
   font-size: 14px;
   font-weight: bold;
-  color: #6c978d;
+  color: #000000;
   line-height: 1.7;
   font-style: italic;
   font-family: 'Playfair Display', serif;
@@ -518,6 +519,7 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #63314B;
+  font-weight: bold;
 }
 
 .port-contact-link-val {
