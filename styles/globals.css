@@ -1,0 +1,31 @@
+/* globals.css — base reset, custom properties, body */
+
+:root {
+  --md-bg: #FBF8F4;
+  --md-bg-alt: #E0DABB;
+  --md-ink: #000000;
+  --md-ink-2: #853D52;
+  --md-ink-3: #9A7B83;
+  --md-rule: #D2C6A6;
+  --md-accent: #63314B;
+  --md-accent-tint: #F1DACF;
+  --md-accent-border: #DBA396;
+  --md-accent-deep: #853D52;
+  --md-sage: #79A89D;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--md-bg);
+  color: var(--md-ink);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01", "kern";
+}

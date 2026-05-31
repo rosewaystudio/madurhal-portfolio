@@ -1,0 +1,601 @@
+/* portfolio.css — all portfolio component styles */
+
+/* ============================================================
+   ROOT & SHARED
+   ============================================================ */
+
+.port-root {
+  background: var(--md-bg);
+  color: var(--md-ink);
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.port-section-label {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6c978d;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+
+.port-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0 18px;
+  border-bottom: 0.5px solid var(--md-rule);
+}
+
+.port-nav-mark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--md-ink);
+}
+
+.port-nav-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.port-nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.port-nav-links a {
+  font-size: 11px;
+  color: var(--md-ink-2);
+  text-decoration: none;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.port-nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: var(--md-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.port-nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.port-hero {
+  padding: 72px 0 64px;
+  border-bottom: 0.5px solid var(--md-rule);
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 56px;
+  align-items: end;
+}
+
+.port-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--md-accent);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.port-hero-tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--md-accent);
+  display: inline-block;
+}
+
+.port-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 0 0 24px;
+  color: var(--md-ink);
+  text-wrap: pretty;
+}
+
+.port-hero-title em {
+  font-style: italic;
+  color: #6c978d;
+}
+
+.port-hero-desc {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #000000;
+  max-width: 320px;
+  margin: 0;
+}
+
+.port-hero-meta {
+  display: grid;
+  gap: 14px;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.port-hero-meta-row {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.port-hero-meta-key {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #63314B;
+}
+
+.port-hero-meta-val {
+  color: var(--md-ink);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.port-hero-meta-val em {
+  color: var(--md-ink-2);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.port-hero-meta-light {
+  color: #853D52;
+  font-size: 12px;
+}
+
+.port-hero-meta-note {
+  margin: 18px 0 0;
+  padding-top: 16px;
+  border-top: 0.5px solid var(--md-rule);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #000000;
+  text-wrap: pretty;
+}
+
+.port-hero-meta-note em {
+  color: #63314B;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* ============================================================
+   THEMES
+   ============================================================ */
+
+.port-themes {
+  padding: 44px 0;
+  border-bottom: 0.5px solid var(--md-rule);
+}
+
+.port-themes-inner {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.port-theme-pill {
+  font-size: 11px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  border: 0.5px solid var(--md-rule);
+  color: var(--md-ink-2);
+  letter-spacing: 0.02em;
+  background: transparent;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.port-theme-pill:hover {
+  border-color: var(--md-ink-2);
+}
+
+.port-theme-pill.accent {
+  background: var(--md-accent-deep);
+  border-color: var(--md-accent-border);
+  color: var(--md-accent-tint);
+  font-weight: 500;
+}
+
+/* ============================================================
+   WORK
+   ============================================================ */
+
+.port-work {
+  padding: 56px 0 48px;
+  border-bottom: 0.5px solid var(--md-rule);
+}
+
+.port-work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.port-work-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.port-work-count {
+  font-size: 12px;
+  font-weight: bold;
+  color: #6c978d;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.port-piece {
+  display: grid;
+  grid-template-columns: 44px 1fr 24px;
+  gap: 0 24px;
+  align-items: start;
+  padding: 28px 0;
+  border-top: 0.5px solid var(--md-rule);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  transition: padding 0.2s ease;
+}
+
+.port-piece::before {
+  content: "";
+  position: absolute;
+  left: -16px;
+  right: -16px;
+  top: 0;
+  bottom: 0;
+  background: transparent;
+  transition: background 0.2s ease;
+  z-index: 0;
+  border-radius: 2px;
+}
+
+.port-piece:hover::before {
+  background: rgba(196, 94, 81, 0.04);
+}
+
+.port-piece > * {
+  position: relative;
+  z-index: 1;
+}
+
+.port-piece:hover .port-piece-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: #C45E51;
+}
+
+.port-piece:hover .port-piece-name {
+  color: #C45E51;
+}
+
+.port-piece:hover .port-piece-desc {
+  color: #C45E51;
+}
+
+.port-piece-num {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: #63314B;
+  padding-top: 2px;
+  font-weight: 400;
+}
+
+.port-piece-cat {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #63314B;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.port-piece-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 6px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--md-ink);
+  transition: color 0.2s;
+}
+
+.port-piece-redact {
+  color: var(--md-ink-3);
+  letter-spacing: 0.04em;
+}
+
+.port-piece-sub {
+  font-size: 14px;
+  font-weight: 500;
+  color: #63314B;
+  font-style: italic;
+  margin-bottom: 12px;
+  font-family: 'Playfair Display', serif;
+}
+
+.port-piece-desc {
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.7;
+  max-width: 460px;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.port-piece-desc em {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: var(--md-ink);
+}
+
+.port-piece-tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.port-piece-tag {
+  font-size: 10px;
+  padding: 3px 9px;
+  background: var(--md-accent-deep);
+  border-radius: 3px;
+  color: var(--md-accent-tint);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.port-piece-arrow {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: var(--md-ink-3);
+  opacity: 0.4;
+  transform: translateX(-4px);
+  transition: opacity 0.2s, transform 0.2s, color 0.2s;
+  padding-top: 4px;
+}
+
+/* ============================================================
+   STATEMENT
+   ============================================================ */
+
+.port-statement {
+  padding: 56px 0;
+  border-bottom: 0.5px solid var(--md-rule);
+}
+
+.port-statement-inner {
+  display: grid;
+  grid-template-columns: 1fr 2.4fr;
+  gap: 48px;
+  align-items: start;
+  margin-top: 24px;
+}
+
+.port-statement-aside {
+  font-size: 14px;
+  color: #63314B;
+  line-height: 1.7;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+  padding-top: 6px;
+}
+
+.port-statement-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--md-ink);
+  margin: 0 0 24px;
+  text-wrap: pretty;
+  position: relative;
+}
+
+.port-statement-quote em {
+  color: #6c978d;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.port-statement-quote-open,
+.port-statement-quote-close {
+  font-family: 'Playfair Display', serif;
+  color: var(--md-accent);
+  font-size: 32px;
+  line-height: 0;
+  position: relative;
+  top: 4px;
+}
+
+.port-statement-body {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #63314B;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+
+.port-contact {
+  padding: 56px 0 40px;
+}
+
+.port-contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-top: 16px;
+}
+
+.port-contact-text {
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.75;
+  margin: 0;
+  max-width: 320px;
+  text-wrap: pretty;
+}
+
+.port-contact-links {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.port-contact-link {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 16px;
+  align-items: baseline;
+  text-decoration: none;
+  padding: 8px 0;
+  border-top: 0.5px solid var(--md-rule);
+  transition: padding 0.2s;
+}
+
+.port-contact-link:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.port-contact-link:hover {
+  padding-left: 6px;
+}
+
+.port-contact-link-label {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #63314B;
+}
+
+.port-contact-link-val {
+  font-size: 14px;
+  color: #000000;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.port-footer {
+  border-top: 0.5px solid var(--md-rule);
+  padding: 22px 0 40px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 24px;
+  align-items: center;
+}
+
+.port-footer-mark {
+  color: #000000;
+  line-height: 1em;
+}
+
+.port-footer-copy {
+  font-size: 12px;
+  color: #000000;
+  letter-spacing: 0.04em;
+}
+
+.port-footer-note {
+  font-size: 12px;
+  color: #000000;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 640px) {
+  .port-root {
+    padding: 0 20px;
+  }
+
+  .port-hero {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 48px 0 40px;
+  }
+
+  .port-hero-title {
+    font-size: 38px;
+  }
+
+  .port-statement-inner {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .port-contact-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .port-footer {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .port-footer-note {
+    grid-column: 1 / -1;
+  }
+
+  .port-nav-links {
+    gap: 16px;
+  }
+}
