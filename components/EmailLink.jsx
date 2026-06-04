@@ -4,6 +4,15 @@ export default function EmailLink({ className }) {
   const handleClick = (e) => {
     e.preventDefault();
     const email = "madurhal@gmail.com";
+    const val = e.currentTarget.querySelector(".port-contact-link-val");
+
+    const showCopied = () => {
+      if (val) {
+        const original = val.textContent;
+        val.textContent = "copied to clipboard ✓";
+        setTimeout(() => { val.textContent = original; }, 2000);
+      }
+    };
 
     const tryClipboard = () => {
       const ta = document.createElement("textarea");
@@ -14,12 +23,7 @@ export default function EmailLink({ className }) {
       ta.select();
       try {
         document.execCommand("copy");
-        const val = e.currentTarget.querySelector(".port-contact-link-val");
-        if (val) {
-          const original = val.textContent;
-          val.textContent = "copied to clipboard ✓";
-          setTimeout(() => { val.textContent = original; }, 2000);
-        }
+        showCopied();
       } catch {
         window.location.href = `mailto:${email}`;
       } finally {
@@ -28,14 +32,7 @@ export default function EmailLink({ className }) {
     };
 
     navigator.clipboard?.writeText(email)
-      .then(() => {
-        const val = e.currentTarget.querySelector(".port-contact-link-val");
-        if (val) {
-          const original = val.textContent;
-          val.textContent = "copied to clipboard ✓";
-          setTimeout(() => { val.textContent = original; }, 2000);
-        }
-      })
+      .then(showCopied)
       .catch(tryClipboard);
   };
 
