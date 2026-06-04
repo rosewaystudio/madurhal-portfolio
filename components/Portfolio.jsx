@@ -1,9 +1,6 @@
-/* Portfolio.jsx — main portfolio component.
-   accent: CSS color string, defaults to coral.
-   logoId: key from MDLogos, defaults to "framed" (Imprint mark). */
-
 import { MDLogos } from "./Logos";
 import Piece from "./Piece";
+import EmailLink from "./EmailLink";
 
 export default function Portfolio({ logoId = "framed", accent = "#C45E51" }) {
   const Logo = MDLogos[logoId] ?? MDLogos.framed;
@@ -94,6 +91,7 @@ export default function Portfolio({ logoId = "framed", accent = "#C45E51" }) {
         <Piece
           num="01"
           cat="Artist statement · Award-winning"
+          href="https://1drv.ms/b/c/247e31edff9ea587/IQBkfDBJ_pPJTILyMh849CzWAXZM1n3zLEJvRzNG3FZQJYg?e=LUtjD9"
           name="Fans, Games, & Bots: Whose Story Is It, Anyway?"
           sub="Excellence in Upper Level Writing, March 2026"
           desc="A personal reckoning with cringe culture — built around a physical collage of beloved fandoms and the vulnerability of caring loudly about things the world calls nerdy."
@@ -102,6 +100,7 @@ export default function Portfolio({ logoId = "framed", accent = "#C45E51" }) {
         <Piece
           num="02"
           cat="Digital studies · StoryMap"
+          href="https://arcg.is/4v8j00"
           name="Absent No Longer"
           sub="Digital Minstrelsy, Black Fatherhood, and Lee Everett from The Walking Dead"
           desc="A media studies essay tracing how minstrel-era stereotypes persist in modern Black video game characters — and why fatherhood alone isn't enough to subvert them."
@@ -110,6 +109,7 @@ export default function Portfolio({ logoId = "framed", accent = "#C45E51" }) {
         <Piece
           num="03"
           cat="Sociolinguistics · Original research"
+          href="https://1drv.ms/b/c/247e31edff9ea587/IQAViLvPUyqVQpei1-YLW28AAambYlXzsCPQTC__vYnkWiY?e=4v5Pni"
           name={
             <>
               Damn, What the F<span className="port-piece-redact">***</span> Is This Sh
@@ -169,10 +169,7 @@ export default function Portfolio({ logoId = "framed", accent = "#C45E51" }) {
             conversations about culture, language, and games.
           </p>
           <div className="port-contact-links">
-            <a href="mailto:madurhal@gmail.com" className="port-contact-link">
-              <span className="port-contact-link-label">email</span>
-              <span className="port-contact-link-val">madurhal@gmail.com</span>
-            </a>
+            <EmailLink className="port-contact-link" />
             <a
               href="https://linkedin.com/in/meccadurhal"
               target="_blank"
@@ -181,10 +178,6 @@ export default function Portfolio({ logoId = "framed", accent = "#C45E51" }) {
             >
               <span className="port-contact-link-label">linkedin</span>
               <span className="port-contact-link-val">in/meccadurhal</span>
-            </a>
-            <a href="/portfolio.pdf" className="port-contact-link">
-              <span className="port-contact-link-label">read all</span>
-              <span className="port-contact-link-val">download portfolio.pdf →</span>
             </a>
           </div>
         </div>
